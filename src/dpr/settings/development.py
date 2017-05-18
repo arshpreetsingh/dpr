@@ -11,9 +11,15 @@ TEMPLATES[0]['OPTIONS'].update({'debug': True})
 if "celery" in sys.argv[0]:
     DEBUG = False
 
+# Static root for project
+
+STATIC_ROOT = join(BASE_DIR, '..', 'site', 'static')
+
+
 # Django Debug Toolbar
 INSTALLED_APPS += (
-    'debug_toolbar',)
+    'debug_toolbar','polls.apps.PollsConfig')
+
 
 # Additional middleware introduced by debug toolbar
 MIDDLEWARE_CLASSES += (
