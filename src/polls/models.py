@@ -7,7 +7,7 @@ from django.utils import timezone
 import datetime
 
 @python_2_unicode_compatible
-class Questions(models.Model):
+class Question(models.Model):
     question_text = models.CharField(max_length=200)
     #pub_date = models.DateTimeField('date published')
 
@@ -20,7 +20,7 @@ class Questions(models.Model):
 
 @python_2_unicode_compatible
 class Choice(models.Model):
-    question = models.ForeignKey(Questions,on_delete=models.CASCADE)
+    question = models.ForeignKey(Question,on_delete=models.CASCADE)
     choice_text = models.CharField(max_length=200)
     
     def __str__(self):

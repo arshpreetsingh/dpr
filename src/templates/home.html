@@ -4,16 +4,18 @@
 {% load crispy_forms_tags %}
 
 {% block title %}{{ block.super }}Home{% endblock %}
-
 {% block navbar-left %}
+
   {% include "_navbar.html" with active_link="home" %}
+
 {% endblock %}
 
 {% block navbar-right %}
   {% if not user.is_authenticated %}
 <a class="btn btn-default" href="{% url 'accounts:login' %}" role="button">Log in</a>
 <a class="btn btn-primary" href="{% url 'accounts:signup' %}" role="button">Sign up</a>
-  {% else %}
+  
+{% else %}
     {{ block.super }}
   {% endif %}
 {% endblock %}
@@ -24,8 +26,13 @@
       <div class="row">
         <div class="col-md-8 col-sm-8">
           <h1>{% include "_brandname.html" %}</h1>
-          <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
-	  <a class="btn btn-primary" href="{% url 'accounts:signup' %}" role="button">Sign up for Free!</a>
+
+          <p>A reporting and rating service to assist HR departments,
+ Organizations, businesses, and individuals with obtaining, understanding, and managing
+digital profiles on the Internet.</p>
+	
+
+  <a class="btn btn-primary" href="{% url 'accounts:signup' %}" role="button">Sign up for Free!</a>
         </div>
         <div class="col-md-4 col-sm-4">
 
@@ -42,19 +49,46 @@
 <div class="container">
   <div class="row">
     <div class="col-lg-4">
-      <h2>Heading</h2>
-      <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-      <p><a class="btn btn-primary" href="#" role="button">View details &raquo;</a></p>
+      <h2>What is a digital profile?</h2>
+
+      <p>Profiling is the process of building a profile using information collected from available data. In general terms, a profile is a description of characteristics of a
+person or entity. A digital profile extends the latter term to include a digital representation, of a person or entity, which considers the characteristics and
+preferences of their online activity.
+<br>
+Digital footprints are a unique set of online activities, actions, and communications that leave a data trace on the Internet, computers, and other devices. It
+includes activities such as websites you visit, emails you send, and information you submit to online services.
+</p>
+      
+<p><a class="btn btn-primary" href="#" role="button">View details &raquo;</a></p>
     </div>
     <div class="col-lg-4">
-      <h2>Heading</h2>
-      <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-      <p><a class="btn btn-primary" href="#" role="button">View details &raquo;</a></p>
+      <h2>Managing your reputation</h2>
+      <p>
+Create a positive digital footprint. The data you create online tells others such as Employers, Universities, Law Enforcement, Teachers, and Parents
+what you have said, what others have said about you, images of you tagged online, browsing habits, personal information, and the most important, social media
+profiles. What does your digital footprint reveal?
+
+</p>
+      
+
+<p><a class="btn btn-primary" href="#" role="button">View details &raquo;</a></p>
     </div>
     <div class="col-lg-4">
-      <h2>Heading</h2>
-      <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.</p>
-      <p><a class="btn btn-primary" href="#" role="button">View details &raquo;</a></p>
+      <h2>Dpr Reporting and Rating</h2>
+      <p>
+
+Just as a person or entity manages their credit reports and scores via Experian or Moody’s for example, it is now necessary in the world we live in today to know
+if our digital profiles are positive, average, or negative.
+<br>
+Why? Because our reports and ratings help entities and individuals to understand the consequences of desired or undesired behavior that may be revealed. For
+example, our reports and ratings can help HR or Talent Management select the appropriate candidate for a job (keep in mind that some entities are looking for
+candidates with undesirable behavior because that is their brand). Or they can inform job applicants what potential employers may learn about their online
+activities and provide them the opportunity to clean up their digital if applicable. Further, this service will help entities maintain sustainable reputations and
+guard against negative impressions.
+</p>
+      
+
+<p><a class="btn btn-primary" href="#" role="button">View details &raquo;</a></p>
     </div>
   </div>
 </div>
